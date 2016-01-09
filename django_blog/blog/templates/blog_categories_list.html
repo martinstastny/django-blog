@@ -1,0 +1,9 @@
+{% block content %}
+    {% for category in categories %}
+        <div class="category-item">
+            <a href="{% url "blog_category_detail" category.slug %}" class="category-item__link">
+                <span class="category-item__title">{{ category.name }} ({{ category.num_of_posts }})</span>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

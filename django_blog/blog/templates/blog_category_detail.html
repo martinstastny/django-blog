@@ -1,0 +1,16 @@
+{% block content %}
+
+    <h1>Category : {{ category.name }}</h1>
+    <span>num of posts: {{ posts.count }}</span>
+
+    {{ object.name }}
+
+    {% for post in posts %}
+        <article>
+            <h2><a href="{% url "blog_post_detail" post.slug %}">{{ post.title }}</a></h2>
+            {{ post.user }}, {{ post.created_at }}
+            <p>{{ post.body|truncatechars:350 }}</p>
+        </article>
+    {% endfor %}
+
+{% endblock %}

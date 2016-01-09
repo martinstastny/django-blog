@@ -1,0 +1,14 @@
+django_blog/django_blog/settings/production.py
+django_blog/django_blog/db.sqlite3
+
+node_modules
+app/bower_components
+.idea
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.sass-cache
+*.pyc
+dist/bower_components
+*.map
+.tmp
